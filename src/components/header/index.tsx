@@ -1,5 +1,4 @@
 import type { FC } from 'react'
-import React from 'react'
 import { Container, Flex, Header as MantineHeader, Title } from '@mantine/core'
 import { IconBrandGithub, IconBrandTwitter } from '@tabler/icons'
 
