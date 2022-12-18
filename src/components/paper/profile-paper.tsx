@@ -1,5 +1,6 @@
 import type { FC } from 'react'
-import { Card, Title, Text, Badge, Space, Flex, Stack } from '@mantine/core'
+import { Title, Text, Badge, Space, Flex, Stack } from '@mantine/core'
+import { BasePaper } from './base-paper'
 
 export type ProfileCardProps = {
    profileList: {
@@ -7,9 +8,9 @@ export type ProfileCardProps = {
       text: string
    }[]
 }
-export const ProfileCard: FC<ProfileCardProps> = ({ profileList }) => (
-   <Card shadow="md" radius="md" withBorder>
-      <Title order={4}>My Profile</Title>
+export const ProfilePaper: FC<ProfileCardProps> = ({ profileList }) => (
+   <BasePaper>
+      <Title order={3}>My Profile</Title>
       <Space h="md" />
       <Stack>
          {profileList.map(({ index, text }, key) => (
@@ -19,5 +20,5 @@ export const ProfileCard: FC<ProfileCardProps> = ({ profileList }) => (
             </Flex>
          ))}
       </Stack>
-   </Card>
+   </BasePaper>
 )

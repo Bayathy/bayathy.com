@@ -1,5 +1,6 @@
 import type { FC } from 'react'
-import { Box, Card, Text, Timeline, Title } from '@mantine/core'
+import { Box, Text, Timeline, Title } from '@mantine/core'
+import { BasePaper } from './base-paper'
 
 export type TimelineCardProps = {
    timeline: {
@@ -7,9 +8,9 @@ export type TimelineCardProps = {
       text: string
    }[]
 }
-export const TimelineCard: FC<TimelineCardProps> = ({ timeline }) => (
-   <Card shadow="md" radius="md" withBorder>
-      <Title order={4}>TimeLine</Title>
+export const TimelinePaper: FC<TimelineCardProps> = ({ timeline }) => (
+   <BasePaper>
+      <Title order={3}>TimeLine</Title>
       <Box p="1rem">
          <Timeline>
             {timeline.map((index, key) => (
@@ -19,5 +20,5 @@ export const TimelineCard: FC<TimelineCardProps> = ({ timeline }) => (
             ))}
          </Timeline>
       </Box>
-   </Card>
+   </BasePaper>
 )
