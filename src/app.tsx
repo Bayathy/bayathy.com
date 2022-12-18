@@ -1,6 +1,7 @@
-import { Container, MantineProvider } from '@mantine/core'
+import { Container, MantineProvider, Stack } from '@mantine/core'
 import { ProfileSection } from './components/section/profile-section'
 import { Header } from './components/header'
+import { WorksSection } from './components/section/works-section'
 
 const timeline = [
    { text: 'test', title: ' test' },
@@ -18,11 +19,14 @@ export default function App() {
       <MantineProvider withGlobalStyles withNormalizeCSS>
          <Header title={'Logo'} />
          <Container>
-            <ProfileSection
-               title={'Bayathy'}
-               timeline={timeline}
-               profileList={profileList}
-            />
+            <Stack>
+               <ProfileSection
+                  title={'Bayathy'}
+                  timeline={timeline}
+                  profileList={profileList}
+               />
+               <WorksSection />
+            </Stack>
          </Container>
       </MantineProvider>
    )

@@ -1,7 +1,7 @@
 import type { FC } from 'react'
 import { Flex, Stack, Title } from '@mantine/core'
-import { TimelineCard, TimelineCardProps } from '../cards/timeline-card'
-import { ProfileCard, ProfileCardProps } from '../cards/profile-card'
+import { TimelineCardProps, TimelinePaper } from '../paper/timeline-paper'
+import { ProfileCardProps, ProfilePaper } from '../paper/profile-paper'
 
 export type ProfileSectionProps = {
    title: string
@@ -17,8 +17,8 @@ export const ProfileSection: FC<ProfileSectionProps> = ({
          <Title>{title}</Title>
       </Flex>
       <Stack>
-         <ProfileCard profileList={profileList} />
-         <TimelineCard timeline={timeline} />
+         <ProfilePaper profileList={profileList} />
+         <TimelinePaper timeline={timeline} />
       </Stack>
    </section>
 )
