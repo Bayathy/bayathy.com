@@ -9,3 +9,4 @@ parserOptions:
 
 rules:
   "unicorn/prevent-abbreviations": off
+  "import/no-unresolved": off
