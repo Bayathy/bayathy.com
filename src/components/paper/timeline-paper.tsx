@@ -10,7 +10,7 @@ export type TimelineCardProps = {
 }
 export const TimelinePaper: FC<TimelineCardProps> = ({ timeline }) => (
    <BasePaper>
-      <Title order={4}>TimeLine</Title>
+      <Title order={3}>TimeLine</Title>
       <Box p="1rem">
          <Timeline>
             {timeline.map((index, key) => (

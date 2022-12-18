@@ -10,7 +10,7 @@ export type ProfileCardProps = {
 }
 export const ProfilePaper: FC<ProfileCardProps> = ({ profileList }) => (
    <BasePaper>
-      <Title order={4}>My Profile</Title>
+      <Title order={3}>My Profile</Title>
       <Space h="md" />
       <Stack>
          {profileList.map(({ index, text }, key) => (
