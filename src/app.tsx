@@ -2,6 +2,7 @@ import { Container, MantineProvider, Stack } from '@mantine/core'
 import { ProfileSection } from './components/section/profile-section'
 import { Header } from './components/header'
 import { WorksSection } from './components/section/works-section'
+import { Footer } from './components/footer'
 
 const timeline = [
    { text: 'test', title: ' test' },
@@ -28,6 +29,7 @@ export default function App() {
                <WorksSection />
             </Stack>
          </Container>
+         <Footer text={'test'} />
       </MantineProvider>
    )
 }
