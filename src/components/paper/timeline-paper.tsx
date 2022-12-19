@@ -2,11 +2,12 @@ import type { FC } from 'react'
 import { Box, Text, Timeline, Title } from '@mantine/core'
 import { BasePaper } from './base-paper'
 
+export type TimeLineList = {
+   title: string
+   text: string
+}[]
 export type TimelineCardProps = {
-   timeline: {
-      title: string
-      text: string
-   }[]
+   timeline: TimeLineList
 }
 export const TimelinePaper: FC<TimelineCardProps> = ({ timeline }) => (
    <BasePaper>

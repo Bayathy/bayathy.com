@@ -2,11 +2,12 @@ import type { FC } from 'react'
 import { Title, Text, Badge, Space, Flex, Stack } from '@mantine/core'
 import { BasePaper } from './base-paper'
 
+export type ProfileList = {
+   index: string
+   text: string
+}[]
 export type ProfileCardProps = {
-   profileList: {
-      index: string
-      text: string
-   }[]
+   profileList: ProfileList
 }
 export const ProfilePaper: FC<ProfileCardProps> = ({ profileList }) => (
    <BasePaper>
