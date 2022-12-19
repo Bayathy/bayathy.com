@@ -5,21 +5,22 @@ import { WorksSection } from './components/section/works-section'
 import { Footer } from './components/footer'
 import { TimeLineList } from './components/paper/timeline-paper'
 import { ProfileList } from './components/paper/profile-paper'
+import { GlobalProvider } from './components/provider'
 
 const timeline: TimeLineList = [
-   { text: 'test', title: ' test' },
-   { text: 'test', title: ' test' },
-   { text: 'test', title: ' test' }
+   { text: 'test', title: 'test' },
+   { text: 'test', title: 'test' },
+   { text: 'test', title: 'test' }
 ]
 
 const profileList: ProfileList = [
-   { index: 'test', text: ' test' },
-   { index: 'test', text: ' test' },
-   { index: 'test', text: ' test' }
+   { index: 'test', text: 'test' },
+   { index: 'test', text: 'test' },
+   { index: 'test', text: 'test' }
 ]
 export default function App() {
    return (
-      <MantineProvider withGlobalStyles withNormalizeCSS>
+      <GlobalProvider>
          <Header title={'Logo'} />
          <Container>
             <Stack>
@@ -33,6 +34,6 @@ export default function App() {
          </Container>
          <Space h={24} />
          <Footer text={'test'} />
-      </MantineProvider>
+      </GlobalProvider>
    )
 }
